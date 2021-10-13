@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Cam Picture</title>
+</head>
+<body>
+    
+
+
+
+
+    <script>
+        
+        let object_list = []
+        
+
+        function GetDataFromUrl(){
+            
+            let api_key = 'bbTGK7SZT6NyWQLoqVKTEcVIuLFlfa7WyEC6SQS1'
+            let nasa_url = `https://api.nasa.gov/EPIC/api/natural/images?api_key=${api_key}`
+            console.log(nasa_url);
+
+
+            fetch(nasa_url)
+                .then((response) => response.json())
+                .then((data) => {
+                    
+                    console.log(data);
+
+            })
+        }
+
+
+        
+            GetDataFromUrl()
+        
+
+        
+        
+
+        
+
+    </script>
+</body>
+</html>
